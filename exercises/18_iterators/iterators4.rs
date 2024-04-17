@@ -3,9 +3,14 @@
 // Execute `rustlings hint iterators4` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
+    (1..num).rfold(1, |acc, n| acc * (n + 1))
+    // match num {
+    //     0 => 1,
+    //     1 => 1,
+    //     _ => factorial(num - 1) * num,
+    // }
+
     // Complete this function to return the factorial of num
     // Do not use:
     // - early returns (using the `return` keyword explicitly)
